@@ -1,0 +1,26 @@
+.custom-nav .nav-link,
+.custom-nav .navbar-brand {
+    color: #78350F !important;
+}
+
+.custom-nav .navbar-brand {
+    color: #78350F;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.navbar {
+    background-color: #FFFBEB;
+}
+
+.custom-nav .custom-signup {
+    border:1px solid #78350F;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 768px) { 
+    .custom-nav .custom-signup {
+        border: none; 
+    }
+}
+  

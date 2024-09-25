@@ -1,0 +1,12 @@
+.custom-container {
+    transition: transform 0.2s; /* Hover efekti için geçiş */
+    color: black;
+  }
+  
+  .custom-container:hover {
+    transform: scale(1.05); /* Hover efekti */
+  }
+
+  .img-fluid{
+    width: auto;
+  }

@@ -1,0 +1,33 @@
+/* homePageSection1.css */
+/* Sign up now butonunun rengini özelleştir */
+.container .custom-signup-btn,
+.container.custom-signup-btn:hover {
+    border: 2px solid #5a2e16;
+    /* Kahverengi çerçeve */
+    color: #5a2e16;
+    /* Kahverengi yazı rengi */
+    background-color: transparent;
+    /* Şeffaf arka plan */
+}
+
+/* Watch Demo butonunun rengini özelleştir */
+.container .custom-watch-btn,
+.container.custom-watch-btn:hover {
+    background-color: transparent;
+    /* Şeffaf arka plan */
+    color: #5a2e16;
+    /* Kahverengi yazı */
+    border: 2px solid transparent;
+    /* Kahverengi çerçeve */
+}
+
+.custom-title {
+    font-size: 3.5rem;
+    /* Daha büyük yazı boyutu */
+}
+
+.img-fluid {
+    width: 400px;
+    /* Sabit genişlik */
+}
+

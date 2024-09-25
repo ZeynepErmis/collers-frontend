@@ -1,0 +1,36 @@
+.section-3 {
+    background-color: #0F172A;
+}
+
+.box-section {
+    background-image: url("../../../assets/Backlightstest.png");
+    background-size: cover;
+    /* Resmin alanı kaplamasını sağlamak için */
+    background-position: center;
+    /* Resmin merkezde yer almasını sağlamak için */
+    padding: 15px;
+}
+
+.box-container {
+    background-color: #1E293B;
+}
+
+.container .custom-buy-btn {
+    background-color: #1E293B;
+    border: 1 solid #E2E8F0;
+    border-color: #E2E8F0;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+.container .custom-signupnow-btn,
+.container .custom-signupnow-btn:hover {
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: transparent;
+}
+
+.img-custom {
+    width: 100%; /* Resmin kutuyu tamamen kaplaması */
+}
