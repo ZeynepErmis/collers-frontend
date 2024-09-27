@@ -1,5 +1,4 @@
 import './App.css';
-import {Button} from 'react-bootstrap';
 import { Home } from './pages/Home';
 
 function App() {

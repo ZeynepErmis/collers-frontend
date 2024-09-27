@@ -7,8 +7,8 @@ export const HomePageSection1 = () => {
   return (
     <div className="container py-5">
       <div className="row align-items-center">
-        <div className="col-md-7"> {/* Sağ tarafta içerik */}
-          <div className='custom-left-container mb-4 mx-auto'>
+        <div className="col-md-7"> {/* Sol tarafta içerik */}
+          <div className='mb-4 mx-auto'>
               <h1 className='mb-4 fw-bold custom-title text-md-start text-center'> {/* md-start büyük ekranlarda sola hizalı, küçük ekranlarda ortalı */}
               Collectible Sneakers
             </h1>

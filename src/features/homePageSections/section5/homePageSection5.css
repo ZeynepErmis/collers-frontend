@@ -1,0 +1,20 @@
+.section-5 {
+    background-color: #FFFBEB;
+}
+.container-background{
+    background-image: url("../../../assets/rectangleBackground.png");
+    height: 200px;
+    display: flex;
+    position: absolute;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards-container {
+    display: flex;
+    overflow: hidden;
+}
+

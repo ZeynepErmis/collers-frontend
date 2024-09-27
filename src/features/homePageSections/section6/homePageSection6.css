@@ -1,0 +1,92 @@
+.custom-button {
+    background-color: transparent; /* Arka planı kaldırır */
+    color: black; /* Metin rengi */
+    border: none; /* Kenarlıkları kaldırır */
+    text-align: left; /* Yazıları sola hizalar */
+    display: flex; /* İkon ve metni yan yana yerleştirir */
+    align-items: center; /* Dikey hizalamayı sağlar */
+    padding: 10px; /* Üst ve alt boşluklar */
+    cursor: pointer; /* Fare imleci tıklanabilir olduğunu gösterir */
+}
+
+.custom-button:hover {
+    background-color: wheat; /* Hover durumunda arka plan */
+    color: black; /* Hover durumunda metin rengi */
+    border-radius: 6px;
+}
+
+.custom-button:focus {
+    outline: none; /* Odaklandığında çerçeve olmaz */
+    background-color: antiquewhite; /* Odak durumunda arka plan rengi */
+    color: black; /* Odak durumunda metin rengi */
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Hafif siyah gölge efekti */
+
+}
+
+.custom-button .pointer {
+    display: none; 
+}
+.custom-button:focus .pointer {
+    display: block;
+}
+
+.position-relative {
+    position: relative; /* Üst üste yerleştirme için konumlandırmayı sağlar */
+}
+
+.desktop {
+    position: absolute; /* Diğer resimlerin altında kalması için absolute kullanıyoruz */
+    top: 0; /* Üstten 0 px */
+    left: 0; /* Soldan 0 px */
+    z-index: 1; /* Diğer resimlerin altında kalması için z-index ayarı */
+}
+
+.desktop2 {
+    position: absolute; /* Üstteki resim için absolute konumlandırma */
+    top: 120px; /* Desktop 2'nin y ekseninde aşağıda kalması için 20 px */
+    left: 50px; /* Desktop 2'nin x ekseninde sağda kalması için 10 px */
+    z-index: 2; /* Desktop 2'nin üstte görünmesi için z-index */
+
+}
+
+.picture {
+    position: absolute; /* Picture için absolute konumlandırma */
+    top: 230px; /* Picture'ı Desktop 2'nin altında konumlandırmak için */
+    right: 0px; /* Picture'ı en sağda konumlandırmak için */
+    z-index: 3; /* Picture'ın en üstte görünmesi için z-index */
+
+}
+
+@media (max-width: 768px) {
+    .desktop{
+        width: 80%; /* Ekran 768px'den küçük olduğunda genişliği %80 yapar
+         */
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop2{
+        width: 80%; /* Ekran 768px'den küçük olduğunda genişliği %80 yapar
+         */
+         top: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .picture {
+        width: 40%; /* Ekran 768px'den küçük olduğunda genişliği %80 yapar */
+        left: 220px;
+        top: 130px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .desktop, .desktop2, .picture {
+        max-width: 100%; /* Ekran 576px'den küçük olduğunda genişliği %100 yapar */
+    }
+}
+
+
+
