@@ -126,6 +126,7 @@ const Footer = () => {
                                 Collers © 2023 Copyright: All rights reserved
                             </div>
                         </div>
+                        
                         {/* Grid column */}
                         <div className=" col-md-5 col-lg-4 ml-lg-0 space-between text-center text-md-end">
                             <a className="m-2 text-decoration-none text-white">
