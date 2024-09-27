@@ -13,6 +13,7 @@ export const HomePageSection4 = () => {
                 <div className="row align-items-center">
                     <div className="box-container-s4 rounded-5 overflow-hidden mt-5 mb-5 d-flex flex-column flex-md-row">
 
+
                         <div className="col-md-6 mb-4 d-flex flex-column justify-content-center ps-5">
                             <div className='mb-4 mx-auto'>
                                 <h1 className="fw-bold text-md-start text-center mb-4">Why join us</h1>
