@@ -15,6 +15,7 @@ const Footer = () => {
                         <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 ">
                             <h6 className="mb-4 fw-bold">Product</h6>
                             <p>
+                                
                                 <a href="#" className="text-white text-decoration-none">Pricing</a>
                             </p>
                             <p>
