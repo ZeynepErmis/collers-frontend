@@ -1,4 +1,7 @@
 # Getting Started with Create React App
+![screencapture-localhost-3000-2024-09-28-21_15_54](https://github.com/user-attachments/assets/aceae0cf-266e-4cc9-8084-caaf2179816b)
+
+![localhost_3000_(iPhone 14 Pro Max)](https://github.com/user-attachments/assets/d84f1622-d8ed-4602-bd95-3152f03e490f)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
