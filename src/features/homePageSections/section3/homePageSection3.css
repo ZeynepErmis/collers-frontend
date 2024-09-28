@@ -5,9 +5,7 @@
 .box-section {
     background-image: url("../../../assets/Backlightstest.png");
     background-size: cover;
-    /* Resmin alanı kaplamasını sağlamak için */
     background-position: center;
-    /* Resmin merkezde yer almasını sağlamak için */
     padding: 15px;
 }
 
@@ -24,21 +22,19 @@
     width: 100%;
 }
 
-.container .custom-signupnow-btn,
-.container .custom-signupnow-btn:hover {
+.container .custom-signupn-btn,
+.container .custom-signupn-btn:hover {
     border: 2px solid #fff;
     color: #fff;
     background-color: transparent;
-    font-size: 1.25rem; /* Yazı boyutunu artır */
-    padding: 0.75rem 3.5rem; /* İç boşlukları artır */
+    font-size: 1.25rem;
+    padding: 0.75rem 3.5rem;
 }
 
 .img-custom {
-    width: 100%; /* Resmin kutuyu tamamen kaplaması */
+    width: 100%;
 }
 
 .box-shadow-custom {
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2); /* Daha geniş ve daha hafif gölge */
-  }
-  
-  
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}

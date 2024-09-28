@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './navigationBar.css';
 
-function NavigationBar() {
+export const NavigationBar = () =>{
   return (
     <>
    <Navbar className="custom-nav" expand="md">
@@ -26,5 +26,3 @@ function NavigationBar() {
     </>
   );
 }
-
-export default NavigationBar;

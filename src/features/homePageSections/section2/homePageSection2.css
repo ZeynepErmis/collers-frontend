@@ -1,12 +1,17 @@
-.custom-container {
-    transition: transform 0.2s; /* Hover efekti için geçiş */
-    color: black;
-  }
-  
-  .custom-container:hover {
-    transform: scale(1.05); /* Hover efekti */
-  }
+.section-2{
+  background-color: #FFFBEB;
+}
 
-  .img-fluid{
-    width: auto;
-  }
+.custom-container {
+  transition: transform 0.2s; /* Transition effect for hover */
+  color: black; /* Text color */
+}
+
+.custom-container:hover {
+  transform: scale(1.05); /* Scale up the container on hover */
+}
+
+.img-fluid {
+  width: auto; /* Responsive image width */
+  /* The class 'img-fluid' will make the image responsive to its container */
+}

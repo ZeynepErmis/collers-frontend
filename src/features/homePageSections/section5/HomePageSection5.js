@@ -1,100 +1,133 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LeftArrow from '../../../assets/leftArrow.svg';
 import RightArrow from '../../../assets/rightArrow.svg';
-import RectangleBackground from '../../../assets/rectangleBackground.png';
-
+import Zoomerr from '../../../assets/zoomerr.png';
+import Sheels from '../../../assets/sheels.png';
+import ArtVenue from '../../../assets/artVenue.png';
 import './homePageSection5.css';
+import Hellen from '../../../assets/hellen.jpeg';
+import Hellena from '../../../assets/Hellena.jpeg';
+import David from '../../../assets/David.jpeg';
+import Sarah from '../../../assets/Sarah.jpeg';
 
-
+// Array containing card data, each object represents a card with its properties
 const cardData = [
     {
         id: 1,
-        title: "Zoomerr",
+        image: Zoomerr,
         content: "Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus.",
         person: "Hellen Jummy",
         role: "Team Lead",
+        picture: Hellen,
     },
     {
         id: 2,
-        title: "SHELLS",
+        image: Sheels,
         content: "Aliquet ridiculus mi porta habitant vulputate rhoncus, mattis amet enim.",
         person: "Hellena John",
         role: "Co-founder",
+        picture: Hellena,
     },
     {
         id: 3,
-        title: "ArtVenue",
-        content: "A eget sed posuere dui risus habitasse mauris. Venentatis aliquet id.",
+        image: ArtVenue,
+        content: "A eget sed posuere dui risus habitasse mauris. Venentatis aliquet.",
         person: "David Oshodi",
         role: "Manager",
+        picture: David,
     },
     {
         id: 4,
-        title: "WAVE",
+        image: Zoomerr,
         content: "Magna volutpat massa integer pellentesque. Venatis aliquet id ultricies.",
         person: "Sarah Wilson",
         role: "Project Manager",
+        picture: Sarah,
     },
-    // Daha fazla kart eklenebilir...
 ];
 
 export const HomePageSection5 = () => {
-    const [cards, setCards] = useState(cardData);
-    const cardsToShow = 3;
+    // State to manage the cards displayed in the slider
+    const [cards, setCards] = useState(cardData); // Initialize cards state with cardData
+    const [cardsToShow, setCardsToShow] = useState(3); // State for the number of cards to display on screen
 
-    // Sağa kaydırma işlemi
+    useEffect(() => {
+        // Effect to adjust the number of cards shown based on the window size
+        const handleResize = () => {
+            if (window.innerWidth < 768) {
+                setCardsToShow(1);  // Set to 1 card for small screens (mobile)
+            } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+                setCardsToShow(2);  // Set to 2 cards for medium screens (tablet)
+            } else {
+                setCardsToShow(3);  // Set to 3 cards for large screens (desktop)
+            }
+        };
+
+        window.addEventListener('resize', handleResize); // Add resize event listener
+        handleResize(); // Call the resize handler to set the initial card count
+
+        return () => {
+            window.removeEventListener('resize', handleResize); // Clean up the event listener on component unmount
+        };
+    }, []);
+
+    // Function to handle the next button click
     const handleNext = () => {
-        const firstCard = cards[0];
-        const newCards = [...cards.slice(1), firstCard];
-        setCards(newCards);
+        const firstCard = cards[0]; // Get the first card from the array
+        const newCards = [...cards.slice(1), firstCard]; // Move the first card to the end of the array
+        setCards(newCards); // Update the state with the new card order
     };
 
-    // Sola kaydırma işlemi
+    // Function to handle the previous button click
     const handlePrev = () => {
-        const lastCard = cards[cards.length - 1];
-        const newCards = [lastCard, ...cards.slice(0, -1)];
-        setCards(newCards);
+        const lastCard = cards[cards.length - 1]; // Get the last card from the array
+        const newCards = [lastCard, ...cards.slice(0, -1)]; // Move the last card to the front of the array
+        setCards(newCards); // Update the state with the new card order
     };
 
     return (
-        <div className="section-5 pt-5 pb-5">
-            <div className="container mt-5">
-                    <div className="d-flex justify-content-between align-items-center">
-                        <div className="align-items-start">
-                            <h2 className="text-center mb-4 fw-bold">Because they love us</h2>
-                        </div>
-                        <div className="align-items-end">
-                            <button className="btn" onClick={handlePrev}>
-                                <img src={LeftArrow} alt="Previous" />
-                            </button>
-                            <button className="btn" onClick={handleNext}>
-                                <img src={RightArrow} alt="Next" />
-                            </button>
-                        </div>
+        <div className="section-5 pt-5 pb-5"> {/* Main section wrapper with padding */}
+            <div className="container mt-5"> {/* Container for heading and buttons */}
+                <div className="d-flex justify-content-between align-items-center"> {/* Flexbox for layout */}
+                    <div className="align-items-start"> {/* Aligns heading */}
+                        <h2 className="text-center mb-4 fw-bold">Because they love us</h2> {/* Section title */}
+                    </div>
+                    <div className="align-items-end"> {/* Aligns buttons */}
+                        <button className="btn" onClick={handlePrev}> {/* Previous button */}
+                            <img src={LeftArrow} alt="Previous" /> {/* Left arrow icon */}
+                        </button>
+                        <button className="btn" onClick={handleNext}> {/* Next button */}
+                            <img src={RightArrow} alt="Next" /> {/* Right arrow icon */}
+                        </button>
                     </div>
                 </div>
-                {/* <div className="container-background">
-                    sds
-                </div> */}
-            <div className="container ">
-                
+            </div>
+            <div className="container"> {/* Container for cards */}
+                <div className="d-flex justify-content-between align-items-center flex-column flex-md-row col-md-12"> {/* Flexbox for cards layout */}
 
-                <div className="d-flex justify-content-between align-items-center flex-column flex-md-row col-md-12">
-
-                    <div className="card-slider d-flex">
+                    <div className=" d-flex">
+                        {/* Flex container for card slider */}
+                        {/* Map through the cards array and display cards based on the number to show */}
                         {cards.slice(0, cardsToShow).map((card) => (
                             <div className="card p-4 mx-2" key={card.id} style={{ minWidth: "300px", borderRadius: "15px" }}>
-                                <h5>{card.title}</h5>
-                                <p>{card.content}</p>
-                                <div className="d-flex align-items-center">
+                                <img src={card.image} style={{ width: "50%" }} alt="company" /> {/* Card image */}
+                                <p>{card.content}</p> {/* Card content text */}
+                                <div className="d-flex align-items-center"> {/* Flexbox for person details */}
                                     <img
-                                        src={`https://via.placeholder.com/40`}
-                                        alt={card.person}
-                                        className="rounded-circle mr-3"
+                                        style={{
+                                            width: "40px",
+                                            height: "40px",
+                                            borderRadius: "50%", // Make image circular
+                                            objectFit: "cover", // Cover the area without distorting
+                                            marginRight: "10px", // Space between image and text
+                                        }}
+                                        alt="profile pic"
+                                        src={card.picture} // Profile picture of the person
+                                        className="rounded-circle" // Additional class for rounded image
                                     />
                                     <div>
-                                        <strong>{card.person}</strong>
-                                        <p className="text-muted mb-0">{card.role}</p>
+                                        {card.person} {/* Person's name */}
+                                        <p className="text-muted mb-0">{card.role}</p> {/* Person's role */}
                                     </div>
                                 </div>
                             </div>

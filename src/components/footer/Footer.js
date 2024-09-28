@@ -3,9 +3,9 @@ import React from 'react';
 import AppStore from '../../assets/AppStore.png';
 import GooglePlay from '../../assets/GooglePlay.png';
 
-const Footer = () => {
+export const Footer = () => {
     return (
-        <footer className="text-center text-lg-start text-white" style={{ backgroundColor: '#0F172A', zIndex: 1, position: 'relative' }}>
+        <footer className="text-center text-lg-start text-white" style={{ backgroundColor: '#0F172A', position: 'relative' }}>
             {/* Grid container */}
             <div className="p-4 pb-0">
                 {/* Section: Links */}
@@ -15,7 +15,7 @@ const Footer = () => {
                         <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 ">
                             <h6 className="mb-4 fw-bold">Product</h6>
                             <p>
-                                
+
                                 <a href="#" className="text-white text-decoration-none">Pricing</a>
                             </p>
                             <p>
@@ -127,7 +127,7 @@ const Footer = () => {
                                 Collers © 2023 Copyright: All rights reserved
                             </div>
                         </div>
-                        
+
                         {/* Grid column */}
                         <div className=" col-md-5 col-lg-4 ml-lg-0 space-between text-center text-md-end">
                             <a className="m-2 text-decoration-none text-white">
@@ -149,5 +149,3 @@ const Footer = () => {
         </footer>
     );
 };
-
-export default Footer;

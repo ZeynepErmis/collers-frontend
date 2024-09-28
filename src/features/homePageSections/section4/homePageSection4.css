@@ -1,9 +1,16 @@
-.box-container-s4{
-    background-color: #fff;
-    display: flex;
-}
-
-.section-4{
+.section-4 {
     background-color: #FFFBEB;
+    /* Light background color for the section */
 }
 
+.box-container-s4 {
+    background-color: #fff;
+    /* White background for the content container */
+    display: flex;
+    /* Use flexbox layout */
+}
+
+.custom-signup-btn {
+    width: 30%;
+    /* Width of the signup button */
+}

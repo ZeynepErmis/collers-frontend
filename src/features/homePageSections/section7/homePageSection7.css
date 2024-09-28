@@ -1,0 +1,129 @@
+/* Styles for the section */
+.section6 {
+  background-color: #78350F; /* Dark brown background */
+  height: 100vh; /* Full viewport height */
+}
+
+/* Styles for the map section */
+.map-section {
+  position: relative;
+  height: 100vh;
+  background-color: #78350F; /* Background color for the section */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-background {
+position: relative;
+width: 1050px; /* Width of the map container */
+height: 650px; /* Height of the map container */
+display: flex;
+align-items: center;
+justify-content: center;
+background-image: url('../../../assets/chart.png'); 
+z-index: 1; 
+}
+
+/* Collected shoes info display styles */
+.collected-info {
+  position: absolute;
+  z-index: 2;  /* Keep above the map */
+  text-align: center;
+  color: white; /* Text color */
+}
+
+.collected-info h1 {
+  font-size: 4rem; /* Font size for the number */
+  font-weight: bold; /* Bold text */
+}
+
+.collected-info p {
+  font-size: 1.5rem; /* Font size for the label */
+}
+
+.shoe-img {
+  width: 60px; /* Image size */
+  height: 60px; /* Image size */
+  margin-right: 10px; /* Space between image and text */
+}
+
+.info-text p {
+  margin: 0; /* Remove default margin */
+}
+
+.circle-container {
+  position: absolute;
+  z-index: 3; /* Keep on top of the map */
+  transform: translate(-50%, -50%); /* Center the circle */
+}
+
+.circle {
+  width: 20px; /* Circle size */
+  height: 20px; /* Circle size */
+  border: 2px solid #00FF00; /* Green border color */
+  border-radius: 50%; /* Make it a circle */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.circle:hover {
+  background-color: #00FF00; 
+}
+
+.info-box {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: -180px; /* Position above the circle */
+  left: -75px; /* Center the info box */
+  width: 150px; /* Width of the info box */
+  padding: 10px; /* Inner padding */
+  background-color: white; /* Background color of the info box */
+  color: black; /* Text color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  z-index: 10; /* Ensure it's on top of other elements */
+  text-align: center; /* Center the text */
+}
+
+.circle-container:hover .info-box {
+  display: block; /* Show info box on circle hover */
+}
+
+.info-box .image-container {
+  width: 100%; /* Make image fill the width */
+  display: flex;
+  justify-content: center; /* Center the image */
+}
+
+.info-box img {
+  width: 100px; /* Set image size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Container for text below the image */
+.info-box .text-container {
+  margin-top: 5px; /* Space between image and text */
+}
+
+.info-box p {
+  margin: 0; /* Remove margin */
+  font-size: 14px; /* Font size for text */
+}
+
+.shoe-counter {
+  position: absolute;
+  bottom: 10%; /* Position towards the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  text-align: center; /* Center the text */
+}
+
+.shoe-counter h1 {
+  font-size: 50px; /* Large font size for visibility */
+  margin: 0; /* Remove default margin */
+}
+
+.shoe-counter p {
+  font-size: 20px; /* Font size for label */
+  margin: 0; /* Remove default margin */
+}
